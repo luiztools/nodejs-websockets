@@ -1,10 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
 import useWebSocket from 'react-use-websocket';
-import { useState } from 'react';
 
 function App() {
-
   const [numero, setNumero] = useState(0);
 
   const { lastJsonMessage, sendMessage } = useWebSocket('ws://localhost:3001', {
@@ -30,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
